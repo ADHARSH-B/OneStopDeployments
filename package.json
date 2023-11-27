@@ -1,0 +1,32 @@
+{
+  "name": "pipeline-automation-flow",
+  "version": "1.0.0",
+  "description": "Automate the pipeline flow",
+  "main": "app.js",
+  "scripts": {
+    "start": " tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cloudfront": "^3.436.0",
+    "@aws-sdk/client-codebuild": "^3.433.0",
+    "@aws-sdk/client-codecommit": "^3.433.0",
+    "@aws-sdk/client-codedeploy": "^3.435.0",
+    "@aws-sdk/client-codepipeline": "^3.435.0",
+    "@aws-sdk/client-s3": "^3.456.0",
+    "@types/shelljs": "^0.8.14",
+    "express": "^4.18.2",
+    "js-yaml": "^4.1.0",
+    "node-jq": "^4.2.2",
+    "shelljs": "^0.8.5",
+    "terraform": "^1.23.0",
+    "terraform-generator": "^5.3.2",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.8",
+    "@types/yamljs": "^0.2.34"
+  }
+}

@@ -1,0 +1,30 @@
+version: 0.2
+# env:
+#   variables:
+#     # DISTRIBUTION_ID: $DISTRIBUTION_ID
+#     NODEJS_VERSION: $NODEJS_VERSION
+#     ANGULAR_CLI_VERSION: $ANGULAR_CLI_VERSION
+#     BUILD_DOCKER_IMAGE: $BUILD_DOCKER_IMAGE
+#     BUILD_FOLDER: $BUILD_FOLDER
+    # DISTRIBUTION_BUCKET: $DISTRIBUTION_BUCKET
+phases:
+    install:
+        runtime-versions:
+            nodejs: $NODEJS_VERSION
+        commands:
+            - echo Installing source NPM dependencies...
+            - apt-get update
+            - apt install sudo
+            - npm install --force
+            - npm install -g @angular/cli
+    build:
+        commands:
+            - npm run build
+
+      
+artifacts:
+  name: build
+  files:
+      - "**/*"
+  discard-paths: no
+  base-directory: dist/$BUILD_FOLDER
