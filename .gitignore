@@ -1,0 +1,4 @@
+./node_modules
+./testing
+./terraform_modules
+./dist
